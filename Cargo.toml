@@ -1,0 +1,30 @@
+[package]
+name = "I2C"
+version = "0.1.0"
+authors = ["nebelgrau77"]
+edition = "2018"
+
+[dependencies]
+cortex-m = "0.6.1"
+cortex-m-rt = "0.6.10"
+# panic-halt = "0.2.0"
+panic-semihosting = "0.5.3"
+
+ssd1306 = {version ="0.3.0", features=["graphics"]}
+embedded-graphics = "0.6.0"
+stm32f0xx-hal = {version = "0.15.2", features = ["stm32f051", "rt"]}
+embedded-hal = "0.2.3"
+
+ds1307 = "0.2.1"
+
+cortex-m-semihosting = "0.3.2"
+
+shared-bus = {version = "0.1.4", features = ["cortexm"]}
+arrayvec = {version = "0.5.1",default-features = false}
+
+bme280 = {path = "drivers/bme280-rs", version = "0.2.2-alpha"}
+
+[profile.release]
+debug = true
+lto = true
+opt-level = "z"
