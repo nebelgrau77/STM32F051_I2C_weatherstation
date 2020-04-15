@@ -18,6 +18,8 @@ Patch consists of removing the I2c Read trait, otherwise the compiler will retur
    = note: required by `bme280::BME280::<I2C, D>::new`
 ~~~~
 
+(ERROR SHOWN FOR STM32F030xx)
+
 Currently will not fit into memory on STM32F030 board.
 
 TO DO:
